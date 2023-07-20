@@ -1,0 +1,291 @@
+/* -------------------------------------------------------------------------- */
+/*                                  variables                                 */
+/* -------------------------------------------------------------------------- */
+
+:root {
+	--c-primary-50: #e9f1fc;
+	--c-primary-100: #b9d4f4;
+	--c-primary-200: #98bfef;
+	--c-primary-300: #68a1e8;
+	--c-primary-400: #4b8fe3;
+	--c-primary-500: #1e73dc;
+	--c-primary-600: #1b69c8;
+	--c-primary-700: #15529c;
+	--c-primary-800: #113f79;
+	--c-primary-900: #0d305c;
+	--c-light-50: #fefefe;
+	--c-light-100: #fcfcfc;
+	--c-light-200: #fbfbfb;
+	--c-light-300: #f9f9f9;
+	--c-light-400: #f8f8f8;
+	--c-light-500: #f6f6f6;
+	--c-light-600: #e0e0e0;
+	--c-light-700: #afafaf;
+	--c-light-800: #878787;
+	--c-light-900: #676767;
+	--c-dark-50: #ebebeb;
+	--c-dark-100: #c0c0c0;
+	--c-dark-200: #a1a1a1;
+	--c-dark-300: #767676;
+	--c-dark-400: #5c5c5c;
+	--c-dark-500: #333333;
+	--c-dark-600: #2e2e2e;
+	--c-dark-700: #242424;
+	--c-dark-800: #1c1c1c;
+	--c-dark-900: #151515;
+	--text-size: 1.8rem;
+	--text-base-size: 48.6111%; /*14px*/
+	--text-scale: 1.125;
+	--text-sm: calc(var(--text-size) / var(--text-scale));
+	--text-md: calc(var(--text-size) * var(--text-scale));
+	--text-lg: calc(var(--text-md) * var(--text-scale));
+	--text-xl: calc(var(--text-lg) * var(--text-scale));
+	--text-2xl: calc(var(--text-xl) * var(--text-scale));
+	--text-3xl: calc(var(--text-2xl) * var(--text-scale));
+	--text-4xl: calc(var(--text-3xl) * var(--text-scale));
+	--heading-font: 'Ubuntu', sans-serif;
+	--body-font: 'Open Sans', sans-serif;
+	--font-weight-r: 400;
+	--font-weight-b: 700;
+	--line-height-r: 1.6;
+	--line-height-s: 1.2;
+	--glow-size: 0.6rem;
+	--tr-time: 320ms; /*step 80*/
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    base                                    */
+/* -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: var(--text-base-size);
+	box-sizing: border-box;
+}
+body {
+	background-color: var(--c-light-500);
+	color: var(--c-dark-500);
+	font-size: var(--text-size);
+	font-family: var(--body-font);
+	font-weight: var(--font-weight-r);
+	line-height: var(--line-height-r);
+	margin: 0;
+}
+/* make images easier to work with */
+img,
+picture {
+	display: block;
+	max-width: 100%;
+	margin: 1.2rem 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--heading-font);
+	font-weight: var(--font-weight-b);
+	line-height: var(--line-height-s);
+	/* margin: 3rem 0 1.38rem; */
+	position: relative;
+}
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		-webkit-animation-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		-webkit-animation-iteration-count: 1 !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 animations                                 */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                  typograpy                                 */
+/* -------------------------------------------------------------------------- */
+
+h1 {
+	font-size: var(--text-4xl);
+}
+h2 {
+	font-size: var(--text-3xl);
+}
+h3 {
+	font-size: var(--text-2xl);
+}
+h4 {
+	font-size: var(--text-xl);
+}
+h5 {
+	font-size: var(--text-lg);
+}
+h6 {
+	font-size: var(--text-md);
+}
+small {
+	font-size: var(--text-sm);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   layout                                   */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                 components                                 */
+/* -------------------------------------------------------------------------- */
+
+.icon {
+	--iconSize: 1em;
+	display: inline-block;
+	fill: currentColor;
+	height: var(--iconSize);
+	stroke-width: 0;
+	stroke: currentColor;
+	width: var(--iconSize);
+}
+.icon--inline {
+	position: relative;
+	top: 0.125em;
+}
+.icon--28 {
+	--iconSize: 2.8rem;
+}
+.button {
+	border: none;
+	border-radius: 0.4rem;
+	color: inherit;
+	cursor: pointer;
+	line-height: inherit;
+	outline: none;
+	transition: background-color var(--tr-time) ease;
+}
+.button:hover {
+	background-color: var(--buttonHoverBgColor);
+	color: var(--buttonHoverColor);
+}
+.button:focus {
+	box-shadow: 0 0 0 var(--glow-size) var(--buttonFocusColor);
+}
+.button:not(:focus-visible) {
+	box-shadow: unset;
+}
+.button:active {
+	background-color: var(--buttonActiveBgColor);
+}
+.button--toggle {
+	--buttonHoverBgColor: var(--c-light-600);
+	--buttonActiveBgColor: var(--c-light-700);
+	--buttonFocusColor: var(--c-light-700);
+	background-color: var(--c-light-500);
+	border: 0.2rem solid var(--c-light-600);
+	color: var(--c-dark-500);
+	line-height: 1;
+	padding: 0.8rem 1.2rem;
+}
+.color-picker {
+	background-color: red;
+	border-radius: 0.4rem;
+	display: inline-block;
+	height: 4rem;
+	width: 4rem;
+}
+.form__control {
+	background-color: var(--c-light-500);
+	border: 0.2rem solid var(--c-light-600);
+	border-radius: 0.4rem;
+	outline: none;
+	padding: 0.8rem 2.4rem;
+	transition: background-color var(--tr-time) ease;
+}
+.form__control:hover,
+.form__control:focus {
+	background-color: var(--c-light-600);
+}
+.range {
+	display: inline-block;
+}
+.range__label {
+	background-color: var(--c-primary-50);
+	border: 0.2rem solid var(--c-primary-100);
+	border-radius: 0.4rem;
+	color: var(--c-primary-800);
+	display: inline-block;
+	padding: 0.8rem 1.2rem;
+	max-width: 8rem;
+}
+.range__label:hover,
+.range__label:focus {
+	background-color: var(--c-primary-50);
+	border: 0.2rem solid var(--c-primary-200);
+}
+.toolbar {
+	flex-wrap: wrap;
+	border-bottom: 0.2rem solid var(--c-light-600);
+	min-width: max-content;
+	padding: 1.6rem;
+	position: relative;
+	overflow-x: auto;
+	width: 100%;
+}
+.toolbar__button.active {
+	--buttonFocusColor: var(--c-primary-100);
+	background-color: var(--c-primary-50);
+	border: 0.2rem solid var(--c-primary-200);
+	color: var(--c-primary-500);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    utils                                   */
+/* -------------------------------------------------------------------------- */
+
+.flex {
+	display: flex;
+}
+.flex-ai-c {
+	align-items: center;
+}
+.mr-16 {
+	margin-right: 1.6rem;
+}
+.mr-24 {
+	margin-right: 2.4rem;
+}
+.mr-32 {
+	margin-right: 3.2rem;
+}
+.ml-auto {
+	margin-left: auto;
+}
+
+@media only screen and (min-width: 375px) {
+	:root {
+		--text-base-size: 52.0833%; /*15px*/
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	:root {
+		--text-base-size: 55.5555%; /*16px*/
+	}
+}

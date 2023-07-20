@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+			integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script type="module" src="./src/app.ts" defer></script>
+		<title>Drawing app</title>
+	</head>
+	<body>
+		<header>
+			<div class="toolbar flex flex-ai-c">
+				<button
+					class="button button--toggle mr-24 toolbar__button active"
+					type="button"
+					title="Brush"
+					aria-label="Enable/disable brush"
+				>
+					<svg class="icon icon--28">
+						<use xlink:href="./assets/sprite.svg/#brush-icon"></use>
+					</svg>
+				</button>
+				<div class="color-picker mr-24"></div>
+				<div class="range mr-24">
+					<input
+						class="range__control mr-16"
+						type="range"
+						min="1"
+						max="100"
+						title="Brush size"
+						aria-label="Brush size"
+						aria-valuenow="12"
+					/>
+					<input
+						type="number"
+						class="form__control range__label"
+						value="12"
+						min="1"
+						max="100"
+						title="Brush size"
+						aria-label="Brush size"
+					/>
+				</div>
+				<button
+					class="button button--toggle toolbar__button mr-24"
+					type="button"
+					title="Eraser"
+					aria-label="Enable/disable eraser"
+				>
+					<svg class="icon icon--28">
+						<use
+							xlink:href="./assets/sprite.svg/#eraser-icon"
+						></use>
+					</svg>
+				</button>
+				<button
+					class="button button--toggle toolbar__button mr-24"
+					type="button"
+					title="Paint bucket"
+					aria-label="Enable/disable paint bucket"
+				>
+					<svg class="icon icon--28">
+						<use
+							xlink:href="./assets/sprite.svg/#paint-bucket-icon"
+						></use>
+					</svg>
+				</button>
+				<div class="color-picker mr-32"></div>
+				<form class="ml-auto mr-24">
+					<input
+						class="form__control"
+						name="fileName"
+						type="text"
+						aria-label="File name"
+						aria-required="true"
+						aria-describedby="The value of this field will be used as the file name"
+					/>
+				</form>
+				<button
+					class="button button--toggle toolbar__button mr-24"
+					type="button"
+					title="Reset canvas"
+					aria-label="Reset canvas"
+				>
+					<svg class="icon icon--28">
+						<use xlink:href="./assets/sprite.svg/#reset-icon"></use>
+					</svg>
+				</button>
+				<button
+					class="button button--toggle toolbar__button mr-24"
+					type="button"
+					title="Upload file"
+					aria-label="Upload file"
+				>
+					<svg class="icon icon--28">
+						<use
+							xlink:href="./assets/sprite.svg/#upload-icon"
+						></use>
+					</svg>
+				</button>
+				<button
+					class="button button--toggle toolbar__button mr-24"
+					type="button"
+					title="Download file"
+					aria-label="Download file"
+				>
+					<svg class="icon icon--28">
+						<use
+							xlink:href="./assets/sprite.svg/#download-icon"
+						></use>
+					</svg>
+				</button>
+				<button
+					class="button button--toggle toolbar__button"
+					type="button"
+					title="Delete project"
+					aria-label="Delete project"
+				>
+					<svg class="icon icon--28">
+						<use xlink:href="./assets/sprite.svg/#trash-icon"></use>
+					</svg>
+				</button>
+			</div>
+		</header>
+		<main>
+			<!-- content -->
+		</main>
+	</body>
+</html>
