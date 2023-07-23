@@ -24,6 +24,7 @@
 		<header>
 			<div class="toolbar flex flex-ai-c">
 				<button
+					id="brush"
 					class="button button--toggle mr-24 toolbar__button active"
 					type="button"
 					title="Brush"
@@ -33,8 +34,8 @@
 						<use xlink:href="./assets/sprite.svg/#brush-icon"></use>
 					</svg>
 				</button>
-				<div class="color-picker mr-24"></div>
-				<div class="range mr-24">
+				<!-- <div class="color-picker mr-24"></div> -->
+				<!-- <div class="range mr-24">
 					<input
 						class="range__control mr-16"
 						type="range"
@@ -53,8 +54,9 @@
 						title="Brush size"
 						aria-label="Brush size"
 					/>
-				</div>
+				</div> -->
 				<button
+					id="eraser"
 					class="button button--toggle toolbar__button mr-24"
 					type="button"
 					title="Eraser"
@@ -66,7 +68,7 @@
 						></use>
 					</svg>
 				</button>
-				<button
+				<!-- <button
 					class="button button--toggle toolbar__button mr-24"
 					type="button"
 					title="Paint bucket"
@@ -77,9 +79,9 @@
 							xlink:href="./assets/sprite.svg/#paint-bucket-icon"
 						></use>
 					</svg>
-				</button>
-				<div class="color-picker mr-32"></div>
-				<form class="ml-auto mr-24">
+				</button> -->
+				<!-- <div class="color-picker mr-32"></div> -->
+				<!-- <form class="ml-auto mr-24">
 					<input
 						class="form__control"
 						name="fileName"
@@ -132,11 +134,13 @@
 					<svg class="icon icon--28">
 						<use xlink:href="./assets/sprite.svg/#trash-icon"></use>
 					</svg>
-				</button>
+				</button> -->
 			</div>
 		</header>
-		<main>
-			<!-- content -->
+		<main class="pos-rel">
+			<canvas id="canvas" class="canvas">
+				Sorry this browser is not compatible with the app
+			</canvas>
 		</main>
 	</body>
 </html>

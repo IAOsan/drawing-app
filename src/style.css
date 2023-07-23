@@ -76,6 +76,7 @@ body {
 	font-weight: var(--font-weight-r);
 	line-height: var(--line-height-r);
 	margin: 0;
+	overflow: hidden;
 }
 /* make images easier to work with */
 img,
@@ -93,7 +94,6 @@ h6 {
 	font-family: var(--heading-font);
 	font-weight: var(--font-weight-b);
 	line-height: var(--line-height-s);
-	/* margin: 3rem 0 1.38rem; */
 	position: relative;
 }
 /* make form elements easier to work with */
@@ -203,6 +203,11 @@ small {
 	line-height: 1;
 	padding: 0.8rem 1.2rem;
 }
+.canvas {
+	background-color: var(--c-light-500);
+	cursor: crosshair;
+	display: block;
+}
 .color-picker {
 	background-color: red;
 	border-radius: 0.4rem;
@@ -240,8 +245,9 @@ small {
 	border: 0.2rem solid var(--c-primary-200);
 }
 .toolbar {
-	flex-wrap: wrap;
+	background-color: var(--c-light-50);
 	border-bottom: 0.2rem solid var(--c-light-600);
+	flex-wrap: wrap;
 	min-width: max-content;
 	padding: 1.6rem;
 	position: relative;
@@ -276,6 +282,9 @@ small {
 }
 .ml-auto {
 	margin-left: auto;
+}
+.pos-rel {
+	position: relative;
 }
 
 @media only screen and (min-width: 375px) {
