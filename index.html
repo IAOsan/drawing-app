@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<script type="module" src="./src/app.ts" defer></script>
+		<script type="module" src="/src/app.ts" defer></script>
 		<title>Drawing app</title>
 	</head>
 	<body>
@@ -31,7 +31,10 @@
 					aria-label="Enable/disable brush"
 				>
 					<svg class="icon icon--28">
-						<use xlink:href="/assets/sprite.svg/#brush-icon"></use>
+						<use
+							xlink:href="/assets/sprite.svg#brush-icon"
+							href="/assets/sprite.svg#brush-icon"
+						></use>
 					</svg>
 				</button>
 				<!-- <div class="color-picker mr-24"></div> -->
@@ -63,7 +66,10 @@
 					aria-label="Enable/disable eraser"
 				>
 					<svg class="icon icon--28">
-						<use xlink:href="/assets/sprite.svg/#eraser-icon"></use>
+						<use
+							xlink:href="/assets/sprite.svg#eraser-icon"
+							href="/assets/sprite.svg#eraser-icon"
+						></use>
 					</svg>
 				</button>
 				<!-- <button
