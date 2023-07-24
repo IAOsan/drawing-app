@@ -37,27 +37,6 @@
 						></use>
 					</svg>
 				</button>
-				<!-- <div class="color-picker mr-24"></div> -->
-				<!-- <div class="range mr-24">
-					<input
-						class="range__control mr-16"
-						type="range"
-						min="1"
-						max="100"
-						title="Brush size"
-						aria-label="Brush size"
-						aria-valuenow="12"
-					/>
-					<input
-						type="number"
-						class="form__control range__label"
-						value="12"
-						min="1"
-						max="100"
-						title="Brush size"
-						aria-label="Brush size"
-					/>
-				</div> -->
 				<button
 					id="eraser"
 					class="button button--toggle toolbar__button mr-24"
@@ -72,6 +51,36 @@
 						></use>
 					</svg>
 				</button>
+				<label for="color-picker" class="color-picker mr-24">
+					<input
+						class="color-picker__control"
+						type="color"
+						id="color-picker"
+						title="Color Picker"
+						aria-label="Color Picker"
+					/>
+				</label>
+				<div class="range mr-24">
+					<input
+						id="brush-size-slider"
+						class="range__control mr-16"
+						type="range"
+						min="1"
+						max="100"
+						title="Brush size"
+						aria-label="Brush size"
+						aria-valuenow="12"
+					/>
+					<input
+						id="brush-size-control"
+						type="number"
+						class="form__control range__label"
+						min="1"
+						max="100"
+						title="Brush size"
+						aria-label="Brush size"
+					/>
+				</div>
 				<!-- <button
 					class="button button--toggle toolbar__button mr-24"
 					type="button"
@@ -94,18 +103,19 @@
 						aria-required="true"
 						aria-describedby="The value of this field will be used as the file name"
 					/>
-				</form>
-				<button
-					class="button button--toggle toolbar__button mr-24"
+				</form> -->
+				<!-- <button
+					id="clear"
+					class="button button--toggle toolbar__button ml-auto"
 					type="button"
-					title="Reset canvas"
-					aria-label="Reset canvas"
+					title="Clear canvas"
+					aria-label="Clear canvas"
 				>
 					<svg class="icon icon--28">
-						<use xlink:href="./assets/sprite.svg/#reset-icon"></use>
+						<use xlink:href="./assets/sprite.svg#reset-icon"></use>
 					</svg>
-				</button>
-				<button
+				</button> -->
+				<!-- <button
 					class="button button--toggle toolbar__button mr-24"
 					type="button"
 					title="Upload file"
@@ -116,8 +126,8 @@
 							xlink:href="./assets/sprite.svg/#upload-icon"
 						></use>
 					</svg>
-				</button>
-				<button
+				</button> -->
+				<!-- <button
 					class="button button--toggle toolbar__button mr-24"
 					type="button"
 					title="Download file"
@@ -128,8 +138,8 @@
 							xlink:href="./assets/sprite.svg/#download-icon"
 						></use>
 					</svg>
-				</button>
-				<button
+				</button> -->
+				<!-- <button
 					class="button button--toggle toolbar__button"
 					type="button"
 					title="Delete project"
