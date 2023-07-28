@@ -51,13 +51,23 @@
 						></use>
 					</svg>
 				</button>
-				<label for="color-picker" class="color-picker mr-24">
+				<label for="brush-color-picker" class="color-picker mr-24">
 					<input
 						class="color-picker__control"
 						type="color"
-						id="color-picker"
-						title="Color Picker"
+						id="brush-color-picker"
+						title="Brush color"
 						aria-label="Color Picker"
+					/>
+				</label>
+				<label for="bucket-color-picker" class="color-picker mr-24">
+					<input
+						class="color-picker__control"
+						type="color"
+						id="bucket-color-picker"
+						title="Background color"
+						aria-label="Color Picker"
+						value="#f6f6f6"
 					/>
 				</label>
 				<div class="range mr-24">
@@ -70,8 +80,10 @@
 						title="Brush size"
 						aria-label="Brush size"
 						aria-valuenow="12"
+						value="10"
 					/>
-					<input
+					<span class="range__label"> 12 </span>
+					<!-- <input
 						id="brush-size-control"
 						type="number"
 						class="form__control range__label"
@@ -79,9 +91,10 @@
 						max="100"
 						title="Brush size"
 						aria-label="Brush size"
-					/>
+					/> -->
 				</div>
 				<!-- <button
+					id="bucket"
 					class="button button--toggle toolbar__button mr-24"
 					type="button"
 					title="Paint bucket"
@@ -89,10 +102,11 @@
 				>
 					<svg class="icon icon--28">
 						<use
-							xlink:href="./assets/sprite.svg/#paint-bucket-icon"
+							xlink:href="./assets/sprite.svg#paint-bucket-icon"
 						></use>
 					</svg>
 				</button> -->
+
 				<!-- <div class="color-picker mr-32"></div> -->
 				<!-- <form class="ml-auto mr-24">
 					<input
@@ -104,8 +118,8 @@
 						aria-describedby="The value of this field will be used as the file name"
 					/>
 				</form> -->
-				<!-- <button
-					id="clear"
+				<button
+					id="cleaner"
 					class="button button--toggle toolbar__button ml-auto"
 					type="button"
 					title="Clear canvas"
@@ -114,7 +128,7 @@
 					<svg class="icon icon--28">
 						<use xlink:href="./assets/sprite.svg#reset-icon"></use>
 					</svg>
-				</button> -->
+				</button>
 				<!-- <button
 					class="button button--toggle toolbar__button mr-24"
 					type="button"
