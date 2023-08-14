@@ -18,7 +18,7 @@ This is a simple web app that allows you to draw on a canvas using a configurabl
 
 ## Screenshots
 
-![](https://hackmd.io/_uploads/rJLz23esh.png)
+![](https://raw.githubusercontent.com/IAOsan/drawing-app/master/screenshot.png)
 
 ## Setup
 
